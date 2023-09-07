@@ -1,0 +1,47 @@
+{% extends 'base.html'%}
+{% block title %}Контакты детейлинг студии {% endblock %}
+
+{% block  content %}
+<h2  style="text-align: center;">Удобная локация</h2>
+<body>
+    <table >
+        <thead>
+            <tr>
+                <th>Контакты</th>
+                <th>Адрес</th>
+                <th>Напишите нам</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in contacts_info %}
+            <tr>
+                <td>{{ contact.tel_number }}
+                <br>{{ contact.work_email}}</td>
+                <td>{{ contact.address  }}</td>
+                <td><a href="https://api.whatsapp.com/send/?phone=+79142705955&text=Здравствуйте%2C+у+меня+есть+вопрос">Whatsapp
+                <br><a href="/callback" > Заказать обратный звонок</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div id="map" style="width: 500px; height: 400px">
+        {% block scripts %}
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=91d4e81a-9e13-4c57-9c98-4b901d2a48a4&lang=ru_RU" type="text/javascript"></script>
+
+            <script type="text/javascript">
+              ymaps.ready(function() {
+                var map = new ymaps.Map('map', {
+                  center: [62.066384, 129.721906], // Координаты места
+                  zoom: 14 // Уровень масштабирования карты
+                });
+
+                var placemark = new ymaps.Placemark([62.066384, 129.721906]); // Координаты места
+
+                map.geoObjects.add(placemark);
+              });
+            </script>
+        {% endblock %}
+    </div>
+
+
+{% endblock %}

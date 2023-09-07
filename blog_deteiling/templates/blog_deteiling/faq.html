@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% block title %}Часто задаваемые вопросы{% endblock %}
+
+{% block  content %}
+    {% for faq in faq_list %}
+        <article class="media content-section">
+                  <div class="media-body">
+                    <div class="article-metadata">
+                        <h2 class="article-title">Вопрос: {{ faq.question }}</h2>
+                         <p class="article-content">Ответ: {{ faq.answer }}</p>
+                    </div>
+                  </div>
+        </article>
+    {% endfor %}
+{% endblock %}

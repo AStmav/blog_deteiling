@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+
+{% block title %}Посты{% endblock %}
+{% block content %}
+        {% for post in posts %}
+
+            <article class="media content-section">
+              <div class="media-body">
+                <div class="article-metadata">
+    <!--              <a class="mr-2" href="#">{{ post.author_info }}</a>-->
+                  <small class="text-muted">{{ post.publication_date  }}</small>
+                </div>
+                <h2><a class="article-title" href="{% url 'one_of_post' post.id %}">{{ post.title }}</a></h2>
+                <p class="article-content">{{ post.short_content }}</p>
+              </div>
+            </article>
+
+        {% endfor %}
+{% endblock %}

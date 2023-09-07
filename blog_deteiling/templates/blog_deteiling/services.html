@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% block title %}Прайс-лист детейлинг студии {% endblock %}
+
+{% block  content %}
+<h2  style="text-align: center;">Прайс-лист BARRACUDADETAILING</h2>
+<body>
+    <table >
+        <thead>
+            <tr>
+                <th>Вид услуги</th>
+                <th>Класс1
+                    <br>Седан</th>
+                <th>Класс2
+                    <br>Джип</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for si in services_info %}
+            <tr>
+                <td>{{ si.name_of_services }}</td>
+                <td>{{ si.price1 }}</td>
+                <td>{{ si.price2 }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

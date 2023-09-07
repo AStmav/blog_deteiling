@@ -1,0 +1,135 @@
+.page-header {
+    background-color: #2e8c7f;
+    margin-top:0;
+    padding: 20px 20px 20px 40px;
+    display: flex;
+    align-items: center;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.page-header nav, .page-header nav a, .page-header nav a:visited, .page-header nav a:active {
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 20pt;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.content {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.date {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.column {
+  background-color: grey;
+  height: 100vh; /* 100% высоты страницы */
+  width: 200px; /* ширина колонки */
+  float: left; /* выравнивание элемента слева */
+}
+
+ul {
+  list-style: none; /* убираем маркеры списка */
+  padding: 0; /* убираем отступ внутри списка */
+  margin-top: 0px; /* отступ сверху колонки */
+
+}
+
+li {
+    text-decoration: none;
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 20pt;
+    text-align: center; /* выравнивание текста по центру */
+}
+.post {
+    margin-bottom: 70px;
+}
+
+.post h1 a, .post h1 a:visited {
+    color: #000000;
+}
+.corp{
+    text-align: center;
+    color: black;
+    font-size: 16pt;
+}
+
+.article-metadata {
+  text-decoration: none;
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  text-decoration: none;
+  color: #444444;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.button{
+    text-decoration: none;
+    background-color: grey;
+    color: white;
+    border: 10px solid grey;;
+}
+table {
+    text-decoration: none;
+    width: 1000px;
+    border: 1px solid grey;
+    align: center;
+    margin: auto;
+    margin-top: 20px;
+    border-collapse: collapse;
+   }
+ td {
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+#map {
+  margin: auto;
+  margin-top: 40px;
+}
+.leftimg {
+   float:left; /* Выравнивание по левому краю */
+   margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+   }
+.rightimg {
+   float: right; /* Выравнивание по правому краю  */
+   margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
+   }

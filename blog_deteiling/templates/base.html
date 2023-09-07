@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  href="{% static 'blog_deteiling/style.css' %}" />
+
+    <title> {% block title %}Default title{% endblock %} </title>
+</head>
+<body>
+    <div class="page-header">
+    {% block h1 %}<h1><link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">Блог детейлера</h1>
+{% endblock%}
+    {%include 'includes/navbar.html'%}
+
+
+<!--    {% block h2 %} {% endblock %}-->
+    </div>
+
+    <div class="post">
+    {% block content %}Default text{% endblock %}
+        {% block faq_content %}{% endblock %}
+
+    </div>
+
+    <div class="corp">© Студия Barracuda Deteiling</div>
+</body>
+</html>

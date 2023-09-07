@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% load static %}
+
+
+{% block title %}Заказать обратный звонок{% endblock %}
+{% block content %}
+    <h2>Заказать обратный звонок</h2>
+    <div class ='text'>Заполните заявку на обратный звонок прямо сейчас и мы постараемся перезвонить Вам в кратчайшее время.</div>
+    <form   method="POST" ><link rel="stylesheet"  href="{% static 'blog_deteiling/callback_style.css' %}" />
+        {% csrf_token %}
+             <div class="media-body">
+                {{  form.as_p }}
+                <input type="submit">
+    </form>
+{% endblock %}

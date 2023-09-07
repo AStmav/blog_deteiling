@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+
+
+{% block title %}Пост:{% endblock %}
+{% block content %}
+
+
+                <article class="media content-section">
+                  <div class="media-body">
+                    <div class="article-metadata">{{ onepost.author }}
+                      <small class="text-muted">{{ onepost.publication_date  }}</small>
+                    </div>
+                    <h2>{{ onepost.title }}</h2>
+                    <p class="article-content">{{ onepost.content }}</p>
+                      {% for photo in photos %}
+                      <img src="{{ photo.image.url }}" alt="Photo" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+
+<!--                      <img src="{{ photo.image.url }}" alt="Photo" style="width: 50%; float: none; display: block; margin: 0 auto;" >-->
+                      {% endfor %}
+
+                  </div>
+                </article>
+
+{% endblock %}

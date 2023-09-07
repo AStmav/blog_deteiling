@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+
+{% block title %}Отзывы наших клиентов{% endblock %}
+{% block content %}
+
+        {% for feed in reviews %}
+
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" >{{ feed.name }}
+              <br>{{ feed.avto }}</a>
+              <ul><small class="text-muted">{{ feed.publication_date  }}</small>
+            </div>
+              <div>
+                  <img src="/media/{{feed.image}}" height="200" width="250" >
+              </div>
+            <p class="article-content">{{ feed.feedback }}</p>
+          </div>
+        </article>
+        {% endfor %}
+
+        <a href="{% url 'feedback' %}" class="button">Оставить отзыв</a>
+
+{% endblock %}

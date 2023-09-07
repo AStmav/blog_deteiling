@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+
+{% block title %} Детейлинг авто в  Якутске {% endblock %}
+
+
+
+
+{% block content %}
+  {% for ip in index_post %}
+
+          <article class="media content-section">
+                  <div class="media-body">
+                    <div class="article-metadata">
+                        <h2 class="article-title">{{ ip.title }}</h2>
+                         <p class="article-content">{{ ip.content }}</p>
+                        <div><img src="/media/{{ip.image}}" style="width: 35%; height: auto; display: block; margin: 0 auto;"></div>
+                    </div>
+                  </div>
+        </article>
+        {% endfor %}
+{% endblock %}
+

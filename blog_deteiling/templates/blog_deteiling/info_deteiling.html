@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}{{sign}}{% endblock %}
+
+
+<!--если адресс введен не правильно-->
+
+{% block content %}
+    {% if description_blog_deteiling is None %}
+        <h2> Такой страницы не существует - {{sign}}</h2>
+
+
+    {% else %}
+        <h2>{{description_blog_deteiling}}</h2>
+
+
+    {% endif %}
+
+{% endblock%}

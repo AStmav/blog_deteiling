@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}Оставить отзыв{% endblock %}
+
+{% block  content %}
+
+<h2>Оставте отзыв</h2>
+    <form   method="POST" enctype="multipart/form-data" ><link rel="stylesheet"  href="{% static 'blog_deteiling/feed_back_style.css' %}" />
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="media-body">
+
+            <div>{{field}}</div>
+            {% if field.errors %}
+            {% for error in field.errors %}
+                <div>
+                    {{error}}
+                </div>
+            {% endfor %}
+            {% endif %}
+
+        </div>
+        {% endfor %}
+
+        <button type="submit">Сохранить</button>
+
+    </form>
+    {% if img_obj %}
+  <h3>Succesfully uploaded : {{img_obj.title}}</h3>
+  <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
+{% endif %}
+{% endblock %}
